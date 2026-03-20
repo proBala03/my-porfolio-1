@@ -168,20 +168,20 @@ if (statsSection) {
 }
 
 // ===== Hero Parallax =====
-const profileCircle = document.querySelector('.profile-circle');
+const heroImage = document.querySelector('.hero-image');
 
 window.addEventListener('mousemove', event => {
-    if (!profileCircle || window.innerWidth < 900) return;
+    if (!heroImage || window.innerWidth < 900) return;
 
     const moveX = (event.clientX / window.innerWidth - 0.5) * 12;
     const moveY = (event.clientY / window.innerHeight - 0.5) * 12;
 
-    profileCircle.style.transform = `rotateY(${moveX}deg) rotateX(${-moveY}deg)`;
+    heroImage.style.transform = `rotateY(${moveX}deg) rotateX(${-moveY}deg)`;
 });
 
 window.addEventListener('mouseleave', () => {
-    if (profileCircle) {
-        profileCircle.style.transform = 'rotateY(0deg) rotateX(0deg)';
+    if (heroImage) {
+        heroImage.style.transform = 'rotateY(0deg) rotateX(0deg)';
     }
 });
 

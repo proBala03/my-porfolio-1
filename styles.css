@@ -6,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #0b8f87;
-    --secondary-color: #f97316;
+    --primary-color: #06b6d4;
+    --secondary-color: #22c55e;
     --accent-color: #1f3a8a;
     --text-color: #172033;
     --muted-text: #5f6b85;
@@ -22,8 +22,8 @@
 }
 
 body.dark-mode {
-    --primary-color: #28c0b2;
-    --secondary-color: #ff8b4d;
+    --primary-color: #22d3ee;
+    --secondary-color: #4ade80;
     --accent-color: #93a8ff;
     --text-color: #edf2ff;
     --muted-text: #b5c2da;
@@ -139,7 +139,7 @@ textarea {
     font-family: 'Sora', 'Manrope', sans-serif;
     font-weight: 800;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #0ea5e9, #22c55e);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -294,19 +294,24 @@ textarea {
 .profile-circle {
     width: 320px;
     height: 320px;
-    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-    background: linear-gradient(140deg, var(--primary-color), var(--accent-color), var(--secondary-color));
+    border-radius: 50%;
+    background-image: url('my_picture.jpeg');
+    background-size: cover;
+    background-position: center 22%;
+    background-repeat: no-repeat;
     box-shadow: var(--shadow-lg);
-    animation: float 5s ease-in-out infinite, morphBlob 14s ease-in-out infinite;
+    animation: float 5s ease-in-out infinite;
     position: relative;
+    overflow: hidden;
+    border: 3px solid color-mix(in srgb, var(--surface) 78%, transparent);
 }
 
 .profile-circle::after {
     content: '';
     position: absolute;
-    inset: 14px;
+    inset: 10px;
     border-radius: inherit;
-    border: 2px solid rgba(255, 255, 255, 0.45);
+    border: 2px solid rgba(255, 255, 255, 0.35);
 }
 
 /* ===== Buttons ===== */
